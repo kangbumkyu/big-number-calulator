@@ -1,5 +1,9 @@
 function multiply(num1, num2) {
   let isSwitched = false;
+  let isNegative = num1[0] === "-" ? true : false;
+  if (isNegative) {
+    num1 = num1.substring(1);
+  }
   const isGreater = isGreaterOrEqual(num1, num2);
   if (!isGreater) {
     let temp = num1;
@@ -39,6 +43,9 @@ function multiply(num1, num2) {
     num1Index = num1.length - 1;
     num2Index--;
     count++;
+  }
+  if (isNegative) {
+    result = `-${result}`;
   }
 
   return result;

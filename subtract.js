@@ -1,4 +1,7 @@
 function subtract(num1, num2) {
+  if (num1[0] === "-") {
+    return `-${add(num1.substring(1), num2)}`;
+  }
   let isSwitched = false;
   let isGreater = isGreaterOrEqual(num1, num2);
   if (isGreater === "equal") {

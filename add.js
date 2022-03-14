@@ -1,4 +1,7 @@
 function add(num1, num2) {
+  if (num1[0] === "-") {
+    return subtract(num2, num1.substring(1));
+  }
   let num1Index = num1.length - 1;
   let num2Index = num2.length - 1;
   let carry = 0;
