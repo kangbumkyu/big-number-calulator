@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
+    <!-- Mocha 프레임워크 코드를 불러옵니다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd"); // 기본 셋업
+    </script>
+
+    <!-- chai를 불러옵니다 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+      // chai의 다양한 기능 중, assert를 전역에 선언합니다.
+      let assert = chai.assert;
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="add.js"></script>
+    <script src="subtract.js"></script>
+    <script src="multiply.js"></script>
+    <script src="isGreaterOrEqual.js"></script>
+    <script src="test_calculate.js"></script>
+
+    <div id="mocha"></div>
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
